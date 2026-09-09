@@ -5,21 +5,21 @@
 class Cloudloupe < Formula
   desc "조회 전용 멀티 계정 AWS 리소스 조사 TUI"
   homepage "https://github.com/cnlgks1/cloudloupe"
-  version "1.0.1"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cnlgks1/cloudloupe/releases/download/v1.0.1/cloudloupe_darwin_amd64.tar.gz"
-      sha256 "281c7e09b97b07358f27101f6252a84b46d0d7d6576c04ff885995853a621c5e"
+      url "https://github.com/cnlgks1/cloudloupe/releases/download/v1.1.0/cloudloupe_darwin_amd64.tar.gz"
+      sha256 "28e1f44611fa5fec3c7a8ecdd3b466e58ef8f28957ba6b752e2db116dc6f5733"
 
       define_method(:install) do
         bin.install "cloudloupe"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cnlgks1/cloudloupe/releases/download/v1.0.1/cloudloupe_darwin_arm64.tar.gz"
-      sha256 "ef7af2a58d4272beee3116911ce733a6702e45d6ebb32b02ae9390f4b4c43f0d"
+      url "https://github.com/cnlgks1/cloudloupe/releases/download/v1.1.0/cloudloupe_darwin_arm64.tar.gz"
+      sha256 "f0ad7453500526439b3ff58d57ceb61c49194d3afb245222222207b84bec1b7d"
 
       define_method(:install) do
         bin.install "cloudloupe"
@@ -29,15 +29,15 @@ class Cloudloupe < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cnlgks1/cloudloupe/releases/download/v1.0.1/cloudloupe_linux_amd64.tar.gz"
-      sha256 "84c05c743fd2a809935cbed9b15c436aad1b4262874c2c24cd269c478863dda7"
+      url "https://github.com/cnlgks1/cloudloupe/releases/download/v1.1.0/cloudloupe_linux_amd64.tar.gz"
+      sha256 "63fcb43b76a03b12347e1955769be6144d5ce0c4557d054850383a79becd8c86"
       define_method(:install) do
         bin.install "cloudloupe"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cnlgks1/cloudloupe/releases/download/v1.0.1/cloudloupe_linux_arm64.tar.gz"
-      sha256 "e6c3d14b7ab0f6858a358961d16e8feb1c899270a7c0996dbe54453a56414b93"
+      url "https://github.com/cnlgks1/cloudloupe/releases/download/v1.1.0/cloudloupe_linux_arm64.tar.gz"
+      sha256 "93bc66a2be9c1e7f0b79fa27ce784cddd177adbbe25ffc21492dd5cce235ada9"
       define_method(:install) do
         bin.install "cloudloupe"
       end
